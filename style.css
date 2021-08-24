@@ -1,0 +1,325 @@
+/** Configurações gerais **/
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #ffe6e6;
+  color: #eb4b5e;
+  font-family: Candara, Helvetica, sans-serif;
+  margin: 0;
+  padding: 10px 50px 50px 50px;
+}
+
+h1, h2 {
+  margin: 0;
+}
+
+header h1 {
+  font-size: 5rem;
+  user-select: none;
+}
+
+#logo {
+  display: flex;
+  justify-content: center;
+  padding: 10px;
+}
+
+#logoImg {
+  padding-right: 10px;
+  pointer-events: none;
+}
+
+.menu {
+  background-color: #eb4b5e;
+  display: flex;
+  justify-content: center;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.2), 0px 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+.menu a {
+  padding: 14px;
+  color: white;
+  text-decoration: none;
+  transition: background-color 0.5s;
+}
+
+.menu a:hover {
+  background-color: white;
+  color: #eb4b5e;
+}
+
+.coluna-esquerda {
+  float: left;
+  width: 75%;
+}
+
+.coluna-direita {
+  float: left;
+  width: 25%;
+  padding-left: 20px;
+}
+
+.card {
+  background-color: white;
+  padding: 20px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  border-radius: 2px;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.2), 0px 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+#promocaoBanner {
+  height: 200px;
+  background-image: url('images/brigadeiros.jpg');
+  background-size: 200%;
+  color: white; 
+  font-size: 1vw; /* vw - viewport width, vh - viewport height */
+  position: relative;
+  text-shadow: 0 0 4px #eb4b5e; 
+  transition: box-shadow 0.5s;
+  cursor: pointer;
+}
+
+#promocaoBanner:hover {
+  box-shadow: 10px 10px 16px #888888;
+}
+
+#promocaoValor {
+  position: absolute;
+  bottom: 26px;
+  right: 22px;  
+}
+
+.sobreImg {
+  height: 75px;
+  border-radius: 50%;
+  margin: 10px;
+  box-shadow: 0px 0px 5px #888888;
+  cursor: pointer;
+  transition: box-shadow 0.3s;
+}
+
+.sobreImg:hover {
+  box-shadow: 5px 10px 10px #888888;
+}
+
+.sobreItens {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.sobreTexto a {
+  color: #eb4b5e;
+}
+
+.promo {
+  display: flex;
+  white-space: nowrap;
+  overflow: hidden;
+  font-size: 1.1vw;
+  padding: 10px;
+  align-items: center;
+  cursor: pointer;
+  transition: box-shadow 0.3s;
+}
+
+.promo p {
+  margin: 0;
+}
+
+.promo:hover {
+  box-shadow: 0 0 20px #888888;
+}
+
+.promo img {
+  height: 50px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+.social {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.social img {
+  margin: 5px;
+  cursor: pointer;
+  transition: opacity 0.3s;
+}
+
+.social img:hover {
+  opacity: 0.5;
+}
+
+.produto img {
+  height: 150px;
+  border-radius: 50%;
+  border: 2px solid #eb4b5e;
+}
+
+.produto {
+  text-align: center;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+}
+
+.miniGrid {
+  height: 280px;
+  padding: 25px;
+  overflow: hidden;
+}
+
+
+/** Seleciona a div com o íncone e o telefone de entrega (id "entrega") **/
+#entrega {
+
+  /** Configura o posicionamento como fixo. Desta forma, o elemento
+  ficará posicionado sempre relativo a área da tela do browser (viewport) **/
+  position: fixed;
+
+  /** Posiciona o elemento 30px em relação a margem inferior **/
+  bottom: 5px;
+
+  /** Posiciona o elemento 10px em relação a margem direita **/
+  right: 10px;
+
+  /** Define um tamanho para o elemento **/
+  height: 100px;
+  width: 300px;
+}
+
+/** Seleciona os elementos de imagem dentro elementos com id "entrega" **/
+#entrega img {
+
+  /** Transforma o elemento num círculo **/
+  border-radius: 50%;
+
+  position: absolute;
+  right: 10px;
+  width: 75px;
+}
+
+#tel {
+opacity: 0;    
+transition: opacity 0.3s;
+}
+  
+#entrega_img:hover + #tel {
+  opacity: 1;    
+}
+
+/** Seleciona elementos com id "tel" **/
+#tel {
+
+  /** Configura a posição como absoluta, visando remover o espaço
+  reservado para o item e posicioná-lo arbitrariamente **/
+  position: absolute;
+
+  /** Define uma altura para o item **/
+  height: 60px;
+
+  /** Define a cor de fundo do item para rosa escuro **/
+  background-color: #cf4b4f;
+
+  /** Define a cor do texto para branco **/    
+  color: white;
+
+  /** Afasta o elemento do topo em 13px **/
+  margin-top: 10px;
+
+  /** Adiciona borda interna ao elemento no tamanho de 10px **/
+  padding: 10px;
+
+  /** Remove a borda interna da parte inferior  **/
+  padding-bottom: 0;
+
+  /** Arredonda um pouco os cantos da div **/
+  border-radius: 15px;
+  left: 16px;
+}
+
+/** Seçeciona os elementos h5 de um elemento com id "tel" **/
+#tel p {
+
+  /** Remove as margens padrão do H **/
+  margin: 0;
+}
+
+
+/* Responsive layout - when the screen is less than 800px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 1500px) {
+  .promoPreco {
+    display: none;
+  }
+  body {    
+    padding: 5px 25px 25px 25px;
+  }
+}
+
+/* Responsive layout - when the screen is less than 800px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 800px) {
+  .coluna-esquerda, .coluna-direita {   
+    width: 100%;
+    padding: 0;
+  }
+  
+  header h1 {
+    font-size: 3rem;
+  }
+
+  #logoImg {
+    width: 75px;
+  }
+
+  /** Selecionamos a div que contém os elementos de promoção **/
+  #promocaoBanner {
+    /** Define um tamanho de fonte de 64px; **/
+    font-size: 4vw;
+  }
+  
+  .promo p {
+    font-size: 3vw;
+  }
+
+  .promoPreco {
+    display: none;
+  }
+}
+
+/* Responsive layout - when the screen is less than 400px wide, make the navigation links stack on top of each other instead of next to each other */
+@media screen and (max-width: 450px) {
+  .menu {
+    display: block;
+    width: 100%;
+  }
+
+  header h1 {
+    font-size: 2rem;
+  }
+
+  #logoImg {
+    width: 50px;
+  }
+
+  .menu {
+    margin: 0;
+  }
+  
+  .promo p {
+    font-size: 5vw;
+  }
+
+  .sn {
+    width: 50px;
+    height: 50px;
+  }
+}
