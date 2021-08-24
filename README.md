@@ -6,3 +6,5 @@ Loouiz was here
 
 Essa é uma alteração que vai gerar conflito
 alterado. conflito :o
+
+Linha adicionada na main
