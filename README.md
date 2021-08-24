@@ -4,4 +4,4 @@ Bem-vindo ao meu repositório de código.
 
 Loouiz was here
 
-Esse é um repositório de teste
+Essa é uma alteração que vai gerar conflito
